@@ -4,6 +4,7 @@ from equipment.models import EquipmentType, Equipment
 
 
 class TypeFilter(filters.FilterSet):
+    """Фильтр для модели EquipmentType по полю тип оборудования"""
     type_equipment = filters.CharFilter(lookup_expr='icontains')
 
     class Meta:
@@ -12,9 +13,9 @@ class TypeFilter(filters.FilterSet):
 
 
 class EquipmentFilter(filters.FilterSet):
-    grade = filters.CharFilter(lookup_expr='icontains')
+    """Фильтр для оборудования по полю серийный номер"""
     serial_number = filters.CharFilter(lookup_expr='icontains')
 
     class Meta:
         model = Equipment
-        fields = ['grade', 'serial_number']
+        fields = ['serial_number']
