@@ -1,5 +1,0 @@
-env/
-.idea/
-node-modules/
-frontend/django_client/node-modules/
-frontend/django_client/.git/
